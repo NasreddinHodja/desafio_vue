@@ -1,3 +1,23 @@
 #+title: README
 
-* install
+* Tarefa
+Você foi solicitado a construir uma aplicação web de Lista de Tarefas. A aplicação deve ter os seguintes recursos:
+
+1. Um formulário para adicionar um novo item à Lista de Tarefas, com um campo para o texto da Tarefa e um botão "Adicionar".
+2. Uma lista de itens da Lista de Tarefas, cada um com uma caixa de seleção para marcá-lo como concluído e um botão "Excluir".
+3. Uma página de detalhes da tarefa, contendo todo o conteúdo da tarefa.
+4. A lista deve ser atualizada em tempo real à medida que as Tarefas são adicionadas, concluídas ou excluídas.
+
+* Sobre
+Feito com Vue.js e [[https://www.npmjs.com/package/json-server][json-server]] como backend.
+
+* Rodando
+** Back-end
+#+begin_src sh
+npm run backend
+#+end_src
+
+** Front-end
+#+begin_src sh
+npm run serve
+#+end_src

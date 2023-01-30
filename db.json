@@ -2,22 +2,22 @@
   "todos": [
     {
       "id": 1,
-      "name": "text 1",
-      "description": "test 1 test 1",
+      "name": "Veterinário",
+      "description": "Levar a Lua no veterinário.",
       "created": "20/01/2023",
       "deadline": "22/01/2023"
     },
     {
       "id": 2,
-      "name": "text 2",
-      "description": "test 2 test 2",
+      "name": "Dentista",
+      "description": "Ir ao dentista para tratar cavidades.",
       "created": "20/01/2023",
       "deadline": "25/01/2023"
     },
     {
       "id": 3,
-      "name": "text 3",
-      "description": "test 3 test 3",
+      "name": "Presente para Clara",
+      "description": "Comprar presente para Clara no shopping.",
       "created": "20/01/2023",
       "deadline": "28/01/2023"
     }

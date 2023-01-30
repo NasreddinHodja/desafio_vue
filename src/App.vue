@@ -87,6 +87,9 @@ export default {
   --orange: #ffb86c;
   --green: #50fa7b;
   --red: #ff5555;
+  --yellow: #f1fa8c;
+  --pink: #ff79c6;
+  --purple: #bd93f9;
 }
 
 * {

@@ -39,41 +39,42 @@ export default {
       this.showAddTodo = !this.showAddTodo;
     },
 
-    deleteTodo(id) {
+    async fetchTodos() {
+      const res = await fetch("api/todos");
+      return await res.json();
+    },
+
+    async fetchTodo(id) {
+      const res = await fetch(`api/todos/${id}`);
+      return await res.json();
+    },
+
+    async deleteTodo(id) {
       if (confirm("Delete Todo?")) {
-        this.todos = this.todos.filter((todo) => todo.id !== id);
+        const res = await fetch(`api/todos/${id}`, {
+          method: "DELETE",
+        });
+
+        res.status === 200
+          ? (this.todos = this.todos.filter((todo) => todo.id !== id))
+          : alert("Error deleting todo");
       }
     },
 
-    addTodo(newTodo) {
-      this.todos = [...this.todos, newTodo];
+    async addTodo(newTodo) {
+      const res = await fetch("api/todos", {
+        method: "POST",
+        headers: {
+          "Content-type": "application/json",
+        },
+        body: JSON.stringify(newTodo),
+      });
+      this.todos = [...this.todos, await res.json()];
     },
   },
 
-  created() {
-    this.todos = [
-      {
-        id: 1,
-        name: "text 1",
-        description: "test 1 test 1",
-        created: "20/01/2023",
-        deadline: "22/01/2023",
-      },
-      {
-        id: 2,
-        name: "text 2",
-        description: "test 2 test 2",
-        created: "20/01/2023",
-        deadline: "22/01/2023",
-      },
-      {
-        id: 3,
-        name: "text 3",
-        description: "test 3 test 3",
-        created: "20/01/2023",
-        deadline: "22/01/2023",
-      },
-    ];
+  async created() {
+    this.todos = await this.fetchTodos();
   },
 };
 </script>

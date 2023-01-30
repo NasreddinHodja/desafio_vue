@@ -46,7 +46,6 @@ export default {
       }
 
       const newTodo = {
-        id: Math.floor(Math.random() * 100000),
         name: this.name,
         description: this.description,
         created: new Date().toLocaleString("pt-br").slice(0, 10),

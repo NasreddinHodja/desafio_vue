@@ -1,11 +1,13 @@
 <template>
   <div id="main-container">
-    <h1>Todo app</h1>
-    <ButtonItem
-      @btn-click="toggleAddTodo"
-      :text="showAddTodo ? 'Close' : 'Add Todo'"
-      :color="showAddTodo ? 'var(--red)' : 'var(--green)'"
-    />
+    <div class="header">
+      <h1>TODOs</h1>
+      <ButtonItem
+        @btn-click="toggleAddTodo"
+        :text="showAddTodo ? 'Close' : 'Add Todo'"
+        :color="showAddTodo ? 'var(--red)' : 'var(--green)'"
+      />
+    </div>
     <div v-show="showAddTodo">
       <AddTodo @add-todo="addTodo" />
     </div>
@@ -118,5 +120,11 @@ h1 {
   border-radius: 5px;
   border-color: var(--bg);
   padding: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 </style>

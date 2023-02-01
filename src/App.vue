@@ -9,13 +9,13 @@
     <div v-show="showAddTodo">
       <AddTodo @add-todo="addTodo" />
     </div>
-    <TodosItem @delete-todo="deleteTodo" :todos="todos" />
+    <TodoList @delete-todo="deleteTodo" :todos="todos" />
   </div>
 </template>
 
 <script>
 import ButtonItem from "./components/ButtonItem.vue";
-import TodosItem from "./components/TodosItem.vue";
+import TodoList from "./components/TodoList.vue";
 import AddTodo from "./components/AddTodo.vue";
 
 export default {
@@ -23,7 +23,7 @@ export default {
 
   components: {
     ButtonItem,
-    TodosItem,
+    TodoList,
     AddTodo,
   },
 

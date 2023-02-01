@@ -8,7 +8,7 @@
 import TodoItem from "./TodoItem.vue";
 
 export default {
-  name: "TodosItem",
+  name: "TodoList",
 
   props: {
     todos: Array,
